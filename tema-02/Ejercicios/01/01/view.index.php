@@ -21,7 +21,7 @@
                 <div class="content">
                     <h1><?php echo $titulo; ?></h1>
                     <p><?php echo $parrafo; ?></p>
-                    <a href="<?php echo $enlace; ?>" target="_blank">Ir a El País</a> 
+                    <a href="<?php echo $enlace; ?>" target="_blank">Ir a El País</a>
                 </div>
 
             </main>
