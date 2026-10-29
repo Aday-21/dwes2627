@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="es">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap 6.0</title>
+
+    <!-- css bootstrap 6.0 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@6.0.0-alpha.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-B/GM4XqrwHnWXNOWMbloTmrYXZg10cakYGmpfsR/bbzQ6JAJI4ihuyADKLnBgrCe" crossorigin="anonymous">
+    
+
+    <!-- icons bootstrap 1.13.2 -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.2/font/bootstrap-icons.min.css">
+</head>
+
+<body>
+    <!-- capa principal de la aplicación -->
+    <div class="container mt-3">
+
+        <!-- cabecera de la aplicación -->
+        <header class="bg-primary text-white p-3 mb-3">
+            <i class="bi bi-stack"></i>
+            <span class="fs-6">02 Crud Artículos</span>
+        </header>
+
+        <!-- contenido principal de la aplicación -->
+        <main>
+            <div class="content">
+                <nav class="navbar md:navbar-expand bg-1">
+                    <div class="container-fluid">
+                        <a class="navbar-brand" href="index.php">Artículos</a>
+                        <dialog class="drawer drawer-end" tabindex="-1" id="navbarDrawer" aria-labelledby="navbarDrawerLabel">
+                            <div class="drawer-body mb-2 md:mb-0">
+                                <ul class="nav navbar-nav me-auto">
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="new.php">Nuevo</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </dialog>
+                    </div>
+                </nav>
+                <!-- Mostrar artículos -->
+                 <h1 class="mb-4">Lista de artículos</h1>
+                    <table class="table table-striped table-bordered">
+                        <thead>
+                            <tr>
+                                <th scope="col" class="text-center">ID</th>
+                                <th scope="col" class="text-center">Descripción</th>
+                                <th scope="col" class="text-center">Modelo</th>
+                                <th scope="col" class="text-center">Categorías</th>
+                                <th scope="col" class="text-center">Unidades</th>
+                                <th scope="col" class="text-center">Precio</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                        <?php foreach ($articulos as $articulo) : ?>
+                            <tr>
+                                <th scope="row" class="text-end"><?= $articulo['id']; ?></th>
+                                <td><?= $articulo['descripcion']; ?></td>
+                                <td><?= $articulo['modelo']; ?></td>
+                                <td><?= implode(', ', $articulo['categorias']); ?></td>
+                                <td class="text-end"><?= $articulo['unidades']; ?></td>
+                                <td class="text-end">
+                                    <?= number_format($articulo['precio'], 2, ',', '.'); ?> €
+                                </td>
+                            </tr>
+                        <?php endforeach; ?>
+                        </tbody>
+                    </table>
+            </div>
+        </main>
+
+        <!-- pie de página de la aplicación -->
+        <footer class="footer mt-auto py-3 fixed-bottom bg-light">
+            <div class="container">
+                <span class="text-muted">&copy; 2026
+                    Aday Trandafir Garcia - DWES - 2º DAW - Curso 26/27
+                </span>
+            </div>
+        </footer>
+
+        <!-- js bootstrap básico 6.0 -->
+        <script type="module" src="https://cdn.jsdelivr.net/npm/bootstrap@6.0.0-alpha.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-1a/pXj49ZQ1aHEmrJ+gMw1otqoVsYwlEnlD8mIfY2TV03r20Y0CN7uqx1tQogjPL" crossorigin="anonymous"></script>
+
+    </div>
+</body>
+
+</html>
