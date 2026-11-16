@@ -23,8 +23,7 @@
             <i class="bi bi-stack"></i>
             <span class="fs-6">Proyecto 3.1 - CRUD Libros</span>
         </header>
-        
-
+        EDIT
         <!-- contenido principal de la aplicación -->
         <main>
             <div class="content">
