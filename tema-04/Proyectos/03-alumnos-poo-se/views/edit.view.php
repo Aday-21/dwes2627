@@ -62,24 +62,14 @@
 
                     <!-- Curso -->
                     <!-- Genera dinámicamente el select de cursos a partir del array $cursos -->
+                     <!-- Curso -->
                     <div class="mb-3">
                         <label for="curso" class="form-label">Curso:</label>
-
                         <select name="curso" id="curso" class="form-select" required>
-
                             <option value="">Seleccione curso ...</option>
-
-                            <?php foreach ($cursos as $indice => $curso) : ?>
-
-                                <option value="<?= $indice ?>"
-                                    <?= ($alumno->curso == $indice) ? 'selected' : null ?>>
-
-                                    <?= $curso ?>
-
-                                </option>
-
+                            <?php foreach ($cursos as $indice => $curso): ?>
+                                <option value="<?= $indice ?>"><?= $curso ?></option>
                             <?php endforeach; ?>
-
                         </select>
                     </div>
                     <!-- Curso -->

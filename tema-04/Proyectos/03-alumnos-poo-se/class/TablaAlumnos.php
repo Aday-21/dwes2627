@@ -63,9 +63,9 @@ class TablaAlumnos
         return [
             new Alumno(
                 1,
-                'Carlos',
+                'Alberto',
                 'García López',
-                'carlos@gmail.com',
+                'alberto@gmail.com',
                 '2005-03-15',
                 0,
                 [0, 1, 3]
@@ -73,9 +73,9 @@ class TablaAlumnos
 
             new Alumno(
                 2,
-                'María',
-                'Fernández Ruiz',
-                'maria@gmail.com',
+                'Manuela',
+                'Garcia Ruiz',
+                'manuela@gmail.com',
                 '2006-07-22',
                 1,
                 [0, 2, 4]
@@ -83,10 +83,10 @@ class TablaAlumnos
 
             new Alumno(
                 3,
-                'Pablo',
-                'Martínez Sánchez',
-                'pablo@gmail.com',
-                '2004-11-10',
+                'GIlberto',
+                'Rodriguez Gil',
+                'gilberto@gmail.com',
+                '2004-02-10',
                 2,
                 [1, 2, 3]
             ),
@@ -94,9 +94,9 @@ class TablaAlumnos
             new Alumno(
                 4,
                 'Lucía',
-                'López Torres',
+                'Bellido Quesito',
                 'lucia@gmail.com',
-                '2005-01-30',
+                '2000-01-30',
                 3,
                 [0, 3, 4]
             )
